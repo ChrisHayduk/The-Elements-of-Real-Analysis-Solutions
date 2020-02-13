@@ -1,0 +1,180 @@
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb, mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{fixltx2e}
+\usepackage[shortlabels]{enumitem}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newcommand{\textfrac}[2]{\dfrac{\text{#1}}{\text{#2}}}
+
+\begin{document}
+
+\title{Chapter 8 - Vector and Cartesian Spaces}
+
+\author{Chris Hayduk}
+\date{\today}
+
+\maketitle
+
+\section{Exercises}
+
+\begin{problem}{8.A} If $V$ is a vector space and if $x + z = x$ for some $x$ and $z$ in $V$, show that $z = 0$. Hence, the zero element in $V$ is unique.
+\end{problem}
+
+Suppose $x + z = x$. Then by the properties of addition on a vector space, we have,
+\begin{align*}
+&x + z = x\\
+\iff &x + z + (-x) = x + (-x)\\
+\iff &x + (-x) + z  = 0\\
+\iff &0 + z = 0\\
+\iff &z = 0
+\end{align*}
+
+All of these statements follow directly from the definition of a vector space (Definition 8.1 in the text).
+
+\begin{problem}{8.B} If $x + y = 0$ for some $x$ and $y$ in $V$, show that $y = -x$.
+\end{problem}
+
+Again using the properties of addition on a vector space, we have,
+\begin{align*}
+&x + y = 0\\
+\iff &x + y + (-x) = 0 + (-x)\\
+\iff &x + (-x) + y  = -x\\
+\iff &0 + y = -x\\
+\iff &y = -x
+\end{align*}
+
+\begin{problem}{8.C} Let $S = \{1, 2, \cdots, p\}$ for some $p \in \mathbb{N}$. Show that the vector space $\mathbb{R}^S$ is ``essentially the same'' as the space $\mathbb{R}^p$.
+\end{problem}
+
+We know from Example 8.2d in the text that $\mathbb{R}^S$ denotes the collection of all functions $u$ with domain $S$ and range in $\mathbb{R}$.\\
+
+We assert that there is a bijection between $\mathbb{R}^p$ and $\mathbb{R}^S$ defined using the functions in $\mathbb{R}^S$. Namely, $f: \mathbb{R}^S \to \mathbb{R}^p$ with $f(u) = (u(1), u(2), \cdots, u(k))$.\\
+
+First we will show that $f$ is injective. So suppose $u, v \in \mathbb{R}^S$ and $x \in \mathbb{R}^p$ with $f(u) = x$ and $f(v) = x$. That is, $u(k) = x_k$ and $v(k) = x_k$ for every $k$. Then clearly $u(k) = v(k)$ for every $k$ and hence the functions are equal.\\
+
+Now to show that $f$ is surjective. Let $x \in \mathbb{R}^p$. Then $x = (x_1, x_2, \cdots, x_p)$.\\
+
+We know that $\mathbb{R}^S$ denotes the collection of all functions $u$ with domain $S$ and range in $\mathbb{R}$, and we know that $x_k \in \mathbb{R}$ for every $k$. Hence, there clearly exists a function $u \in \mathbb{R}^S$ such that $u(k) = x_k$ for every $k$. Thus, $f$ is surjective.\\
+
+Now we need to show that $f$ preserves addition and scalar multiplication. That is, $f(u + v) = f(u) + f(v)$ and $f(cu) = cf(u)$.\\
+
+Let $u, v \in \mathbb{R}^S$ with $f(u) = x$ and $f(v) = y$. Then,
+\begin{align*}
+f(u + v) &= (u(1) + v(1), u(2) + v(2), \cdots, u(p) + v(p))\\
+&= (x_1 + y_1, \cdots, x_p + y_p)\\
+&= (x_1, \cdots, x_p) + (y_1, \cdots, y_p)\\
+&= x + y\\
+&= f(u) + f(v)
+\end{align*}
+
+So $f$ preserves addition. Now to check scalar multiplication:
+\begin{align*}
+f(cu) &= (cu(1), \cdots, cu(p))\\
+&= c(u(1), \cdots, u(p))\\
+&= cf(u)
+\end{align*}
+
+So $f$ preserves scalar multiplication.\\
+
+Since $f$ is a bijection between the elements of $\mathbb{R}^S$ and $\mathbb{R}^p$ which preserves addition and scalar multiplication, these two vector spaces are isomorphic (ie. ``essentially the same'').
+
+\begin{problem}{8.D} If $w_1$ and $w_2$ are strictly positive, show that the definition $(x_1, x_2) \cdot (y_1, y_2) = x_1y_1w_1 + x_2y_2w_2$ yields an inner product on $\mathbb{R}^2$. Generalize this to $\mathbb{R}^p$.
+\end{problem}
+
+We need to show that this potential norm satisfies the five conditions of Definition 8.3 in the text:
+
+\begin{enumerate}
+
+\item \begin{align*}
+x \cdot x = (x_1, x_2) \cdot (x_1, x_2) &= x_1x_1w_1 + x_2x_2w_2\\
+&= x_1^2w_1 + x_2^2w_2\\
+\geq 0
+\end{align*}
+
+\item \begin{align*}
+&(x_1, x_2) \cdot (x_1, x_2) = 0\\
+\iff &x_1^2w_1 + x_2^2w_2 = 0\\
+\iff &x_1^2w_1 = -x_2^2w_2
+\end{align*}
+
+We know that $x_1^2w_1 \geq 0$ and $x_2^2w_2 \geq 0$. Hence, $x_1^2w_1 = -x_2^2w_2$ iff $x_1^2w_1 = 0 = x_2^2w_2$.
+
+\item \begin{align*}
+x \cdot y = (x_1, x_2) \cdot (y_1, y_2) &= x_1y_1w_1 + x_2y_2w_2\\
+&= y_1x_1w_1 + y_2x_2w_2\\
+&= (y_1, y_2) \cdot (x_1, x_2)\\
+&= y \cdot x
+\end{align*}
+
+\item \begin{align*}
+x \cdot (y + z) = (x_1, x_2) \cdot (y_1 + z_1, y_2 + z_2) &= x_1(y_1 + z_1)w_1 + x_2(y_2 + z_2)w_2\\
+&= (x_1y_1 + x_1z_1)w_1 + (x_2y_2 + x_2z_2)w_2\\
+&= x_1y_1w_1 + x_1z_1w_1 + x_2y_2w_2 + x_2z_2w_2\\
+&= (x_1y_1w_1 + x_2y_2w_2) + (x_1z_1w_1 + x_2z_2w_2)\\
+&= (x_1, x_2) \cdot (y_1, y_2) + (x_1, x_2) \cdot (z_1, z_2)\\
+&= x \cdot y + x \cdot z
+\end{align*}
+
+and, 
+\begin{align*}
+(x + y) \cdot z = (x_1 + y_1, x_2 + y_2) \cdot (z_1, z_2) &= (x_1 + y_1)z_1w_1 + (x_2 + y_2)z_2w_2\\
+&= (x_1z_1 + y_1z_1)w_1 + (x_2z_2 + y_2z_2)w_2\\
+&= x_1z_1w_1 + y_1z_1w_1 + x_2z_2w_2 + y_2z_2w_2\\
+&= (x_1z_1w_1 + x_2z_2w_2) + (y_1z_1w_1 + y_2z_2w_2)\\
+&= (x_1, x_2) \cdot (z_1, z_2) + (y_1, y_2) \cdot (z_1, z_2)\\
+&= x \cdot z + y \cdot z
+\end{align*}
+
+\item \begin{align*}
+(ax) \cdot y &= (ax_1, ax_2) \cdot (y_1, y_2)\\
+&= ax_1y_1w_1 + ax_2y_2w_2\\
+&= a(x_1y_1w_1 + x_2y_2w_2) = a(x \cdot y)\\
+&= x_1(ay_1)w_1 + x_2(ay_2)w_2\\
+&= x \cdot (ay)
+\end{align*}
+\end{enumerate}
+
+Hence, the proposed norm satisfies all of the necessary properties and thus defines a valid norm on $\mathbb{R}^2$.\\
+
+In order to generalize this norm to $\mathbb{R}^p$, we need to fix $w \in \mathbb{R}^p$ such that each component of $w$ is strictly positive. Then the corresponding norm is given by,
+\begin{align*}
+x \cdot y = \sum_{i=1}^p x_iy_iw_i
+\end{align*}
+
+\begin{problem}{8.E} The definition $(x_1, x_2) \cdot (y_1, y_2) = x_1y_1$ is \textit{not} an inner product on $\mathbb{R}^2$. Why?
+\end{problem}
+
+Let $x = (0, 1)$. Then $x \cdot x = 0(0) = 0$, but $x \neq (0, 0)$. Hence, property 2 of Definition 8.3 is violated and this does not define a valid norm.
+
+\begin{problem}{8.F} If $x = (x_1, x_2, \cdots, x_p) \in \mathbb{R}^p$, define $||x||_1$ by $||x||_1 = |x_1| + |x_2| + \cdots + |x_p|$. Prove that $x \to ||x||_1$ is a norm on $\mathbb{R}^p$.
+\end{problem}
+
+We need to show that this proposed norm satisfies all four properties of Definition 8.5 in the text.
+
+\section{Project}
+
+
+\end{document}
