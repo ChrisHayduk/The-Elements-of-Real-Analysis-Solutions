@@ -174,6 +174,56 @@ Let $x = (0, 1)$. Then $x \cdot x = 0(0) = 0$, but $x \neq (0, 0)$. Hence, prope
 
 We need to show that this proposed norm satisfies all four properties of Definition 8.5 in the text.
 
+\begin{enumerate}
+
+\item We have that $||x||_1 = |x_1| + |x_2| + \cdots + |x_p|$ for every $x \in \mathbb{R}^p$. Note that, for each $x_k \in \mathbb{R}$, $|x_k| \geq 0$. Hence, the sum of these terms must also be greater than or equal to $0$.\\
+
+As a result, we have that $||x|| \geq 0$ for every $x \in \mathbb{R}^p$.
+
+\item Suppose $||x||_1 = 0$. Then $|x_1| + |x_2| + \cdots + |x_p| = 0$. Since each $|x_k| \geq 0$ for every $k$, the sum of the terms is $0$ iff each term is $0$. Hence, x = 0.\\
+
+Now suppose $x = 0$. Then $||x||_1 = |x_1| + |x_2| + \cdots + |x_p| = |0| + \cdots |0| = 0$.
+
+\item Let $a \in \mathbb{R}$ and $x \in \mathbb{R}^p$. Then,
+\begin{align*}
+||ax||_1 &= |ax_1| + |ax_2| + \cdots |ax_p|\\
+&= |a| \cdot |x_1| + |a| \cdot |x_2| + \cdots |a| \cdot |x_p| \\
+&= |a| \cdot (|x_1| + \cdots |x_p|)\\
+&= |a| \cdot ||x||_1
+\end{align*}
+
+\item Let $x, y \in \mathbb{R}^p$. We have that,
+\begin{align*}
+||x + y|| &= |x_1 + y_1| + |x_2 + y_2| + \cdots |x_p + y_p|
+\end{align*}
+
+By Theorem 5.12 in the text, we know that $|x_k + y_k| \leq |x_k| + |y_k|$ since $x_k, y_k \in \mathbb{R}$ for every $k$. Hence, we have,
+\begin{align*}
+||x + y|| &\leq |x_1| + |y_1| + |x_2| + |y_2| + \cdots |x_p| + |y_p|\\
+&= |x_1| + \cdots |x_p| + |y_1| + \cdots + |y_p|\\
+&= ||x|| + ||y||
+\end{align*}
+\end{enumerate}
+
+Thus, all of the properties hold and this defines a valid norm on $\mathbb{R}^p$.
+
+\begin{problem}{8.G} If $x = (x_1, x_2, \cdots, x_p) \in \mathbb{R}^p$, define $||x||_{\infty}$ by $||x||_{\infty} = \sup\{|x_1|, |x_2|, \cdots, |x_p|\}$. Prove that $x \to ||x||_{\infty}$ is a norm on $\mathbb{R}^p$.
+\end{problem}
+
+Once again, we need to show that this proposed norm satisfies all four properties of Definition 8.5 in the text.
+
+\begin{enumerate}
+
+\item
+
+\item
+
+\item
+
+\item
+
+\end{enumerate}
+
 \section{Project}
 
 
