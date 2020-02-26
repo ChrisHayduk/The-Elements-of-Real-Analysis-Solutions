@@ -214,16 +214,85 @@ Once again, we need to show that this proposed norm satisfies all four propertie
 
 \begin{enumerate}
 
-\item
+\item Note that the supremum of a finite set is just the maximum element of that set. As we noted above $|x_k| \geq 0$ for every $k$ and every $x \in \mathbb{R}^p$.\\
 
-\item
+Hence, let $k \in \{1, \cdots, p\}$ such that $x_k = \sup\{|x_1|, |x_2|, \cdots, |x_p|\}$. Then we have that $||x||_{\infty} = \sup\{|x_1|, |x_2|, \cdots, |x_p|\} = |x_k| \geq 0$ as required.
 
-\item
+\item Suppose $||x||_{\infty} = 0$ and let $k \in \{1, \cdots, p\}$ such that $x_k = \sup\{|x_1|, |x_2|, \cdots, |x_p|\}$. Then,
+\begin{align*}
+&||x||_{\infty} = 0\\
+\implies &||x||_{\infty} = \sup\{|x_1|, |x_2|, \cdots, |x_p|\} = |x_k| = 0
+\end{align*}
 
-\item
+Since $|x_k|$ is the supremum of the above set, we have that $|x_j| \leq |x_k|$ for every $j \in \{1, \cdots p\}$. Again note that $|y| \geq 0 \; \forall y \in \mathbb{R}$.\\
 
+Thus, we have that $0 \leq |x_j| \leq |x_k| = 0$ for every $j \in \{1, \cdots p\}$.\\
+
+As a result, we have that $|x_j| = 0$ for every $j \in \{1, \cdots p\}$ and, hence, $x = 0$.\\
+
+Now suppose $x = 0$. Then,
+\begin{align*}
+||x||_{\infty} &= \sup\{|x_1|, |x_2|, \cdots, |x_p|\}\\
+&= \sup\{|0|, \cdots, |0|\}\\
+&= |0| = 0
+\end{align*}
+
+\item Let $a \in \mathbb{R}$ and $x \in \mathbb{R}^p$. Also let $k \in \{1, \cdots, p\}$ such that $\sup\{|ax_1|, |ax_2|, \cdots, |ax_p|\} = |ax_k|$. Then,
+\begin{align*}
+||ax||_{\infty} &= \sup\{|ax_1|, |ax_2|, \cdots, |ax_p|\}\\
+&= |ax_k|\\
+&= |a| \cdot |x_k|
+\end{align*}
+
+Now we need to show that $|x_k| = ||x||_{\infty}$.\\
+
+Suppose for contradiction that $\exists j \in \{1, \cdots, p\}$ such that $|x_j| > |x_k|$.\\
+
+Suppose $a \neq 0$. Since $|a| > 0$ for every $a \neq 0$, multiplying both sides of this inequality by $|a|$ preserves it. This yields,
+\begin{align*}
+&|x_j| |a| > |x_k| |a|\\
+\iff &|ax_j| > |ax_k|
+\end{align*}
+
+which is a contradiction since $|ax_k| = \sup\{|ax_1|, |ax_2|, \cdots, |ax_p|\}$. Hence, if $a \neq 0$, then $||x||_{\infty} = |x_k|$ and $||ax||_{\infty} = |a| \cdot ||x||_{\infty}$.\\
+
+Moreover, if $a = 0$, then each $|ax_i| = 0$ as shown in part 2, so $||ax||_{\infty} = |ax_k| = 0$. In addition, regardless of the value of $||x||_{\infty}$, we have that $|a| \cdot ||x||_{\infty} = |0| \cdot ||x||_{\infty} = 0 = ||ax||_{\infty}$. So when $a = 0$, we have that $||ax||_{\infty} = 0 = |a| \cdot ||x||_{\infty}$\\
+
+Hence, we have that for any $a \in \mathbb{R}$, $x \in \mathbb{R}^p$, $||ax||_{\infty} = |a| \cdot ||x||_{\infty}$
+
+\item Let $x, y \in \mathbb{R}^p$. In addition, let $k \in \{1, \cdots, p\}$ be such that $|x_k + y_k| = \sup\{|x_1 + y_1|, |x_2 + y_2|, \cdots, |x_p + y_p|\}$. Then,
+\begin{align*}
+||x + y||_{\infty} &= \sup\{|x_1 + y_1|, |x_2 + y_2|, \cdots, |x_p + y_p|\}\\
+&= |x_k + y_k|
+\end{align*}
+
+Since $x_k, y_k \in \mathbb{R}$, we have by the triangle inequality that $|x_k + y_k| \leq |x_k| + |y_k|$.\\
+
+Note that $||x||_{\infty} + ||y||_{\infty}$ is defined as,
+\begin{align*}
+||x||_{\infty} + ||y||_{\infty} &= \sup\{|x_1|, |x_2|, \cdots, |x_p|\} + \sup\{|y_1|, |y_2|, \cdots, |y_p|\}\\
+&= |x_j| + |y_i|
+\end{align*}
+
+for some $i, j \in \{1, \cdots, p\}$. Note, by the definition of supremum, we have that $|x_k| \leq |x_j|$ and $|y_k| \leq |y_i|$. Hence, it follows that,
+\begin{align*}
+|x_k + y_k| \leq |x_k| + |y_k| \leq |x_j| + |y_i|
+\end{align*}
+
+which gives us,
+\begin{align*}
+||x + y||_{\infty} \leq ||x||_{\infty} + ||y||_{\infty}
+\end{align*}
 \end{enumerate}
 
+This proposed norm satisfies all of the above properties and is thus a valid norm on $\mathbb{R}^p$.
+
+\newpage
+
+\begin{problem}{8.H} In the set $\mathbb{R}^2$, describe the sets $S_1 = \{x \in \mathbb{R}^2: ||x||_1 < 1\}$ and $S_{\infty} = \{x \in \mathbb{R}^2: ||x||_{\infty} < 1\}$.
+\end{problem}
+
+\newpage
 \section{Project}
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.28)  13 FEB 2020 22:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.28)  14 FEB 2020 02:24
 entering extended mode
 **./Chapter_8.tex
 (Chapter_8.tex
@@ -508,7 +508,52 @@ T1/lmr/m/n/12 = []\OMS/lmsy/m/n/12 fj\OML/lmm/m/it/12 x[]\OMS/lmsy/m/n/12 j\OML
 lmr/m/n/12 .
  []
 
-[4] [5] (Chapter_8.aux) ) 
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 257--258
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
+
+ []
+
+[6] [7] [8] (Chapter_8.aux) ) 
 Here is how much of TeX's memory you used:
  4136 strings out of 492970
  61539 string characters out of 3126593
@@ -516,28 +561,28 @@ Here is how much of TeX's memory you used:
  7909 multiletter control sequences out of 15000+200000
  52287 words of font info for 60 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,8n,32p,315b,245s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Chris/AppData/Local/Programs/MiKTeX 2.9/font
-s/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Chris/AppData/Local/Programs/MiKTeX 2.9/
-fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Chris/AppData/Local/Programs/MiKTeX 2.9/
-fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/Chris/AppData/Local/Programs/MiKTeX 
-2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Chris/AppData/Local/Programs/MiKTeX 
-2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Users/Chris/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Chris/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Users/Chris/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Chris/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Chris/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/Chris/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Users/Chris/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/Chris/App
-Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Users/Chris
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/C
-hris/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/User
-s/Chris/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/m
-sbm10.pfb>
-Output written on Chapter_8.pdf (5 pages, 151859 bytes).
+ 55i,8n,32p,347b,245s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Chris/AppData/Local/Programs/MiKTeX 2.9/
+fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Chris/AppData/Local/Programs/MiKTeX 
+2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Chris/AppData/Local/Programs/MiKTeX 
+2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/Chris/AppData/Local/Programs/MiK
+TeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Chris/AppData/Local/Programs/MiK
+TeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Users/Chris/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Chris/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Users/Chris/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Chris/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Chris/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/Chris/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Users/Chris/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/Chris
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Users/C
+hris/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Use
+rs/Chris/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/
+Users/Chris/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbo
+ls/msbm10.pfb>
+Output written on Chapter_8.pdf (8 pages, 159408 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
+ 80 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
